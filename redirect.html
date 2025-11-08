@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Redirecting...</title>
   <script src="redirects.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // derive key from filename
-      const key = location.pathname.split("/").pop().split(".")[0];
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get("to");
+
       const dest = redirects[key];
       if (dest) {
-        window.location.href = dest;  // same-tab redirect
+        window.location.href = dest;
       } else {
         document.body.innerHTML = `<p>No redirect found for <b>${key}</b>.</p>`;
       }
@@ -18,6 +19,6 @@
   </script>
 </head>
 <body>
-  <p>Redirecting…</p>
+  <p>Redirecting...</p>
 </body>
 </html>
