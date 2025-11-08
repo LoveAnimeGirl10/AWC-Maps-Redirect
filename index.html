@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Map Redirect Directory</title>
+  <script src="redirects.js"></script>
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; max-width: 600px; margin: 2em auto; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Map Redirects</h1>
+  <p>Click a name below to open its current map:</p>
+  <ul id="redirect-list"></ul>
+
+  <script>
+    const list = document.getElementById("redirect-list");
+    for (const key in redirects) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `${key}.html`;   // links to redirect page
+      a.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+      li.appendChild(a);
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>
