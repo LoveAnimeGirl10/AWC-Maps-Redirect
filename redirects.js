@@ -5,4 +5,5 @@ const redirects = {
   gacha_video_games: "https://anilist.co/forum/thread/67067/comment/3131931",             // 4
   gacha_sports_festival: "https://anilist.co/forum/thread/67067/comment/3219420",         // 5
   gacha_surviving_highschool: "https://anilist.co/forum/thread/67067/comment/3240922",    // 4
+  gacha_shinigami: "https://anilist.co/forum/thread/67067/comment/3251993"                // 1
 };
